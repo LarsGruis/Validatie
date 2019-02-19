@@ -4,11 +4,31 @@
 }
 
 .navbar {
-	margin-bottom: 30px;
+	
+}
+
+.container {
+	padding-top: 15px;
 }
 
 .navbar-title {
 	font-size: 2.2rem;
+}
+
+.nav a {
+	color: white;
+}
+
+.alert {
+	display: none;
+}
+
+.alert-danger {
+	font-weight: 700;
+}
+
+#border_yellow {
+	outline: none;
 }
 
 /* body {
