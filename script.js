@@ -6,7 +6,14 @@
   }
 } */
 
+
 function validateForm() { 
+    var inputs = document.getElementsByClassName('form-control');
+
+    for (var i = inputs.length - 1; i >= 0; i--) {
+      inputs[i].setAttribute("required", "");
+    }
+
     var first_name = document.forms["myForm"]["fname"];
     var last_name = document.forms["myForm"]["lname"];
     var postal_code = document.forms["myForm"]["postalcode"];
@@ -17,9 +24,9 @@ function validateForm() {
     if (first_name.value == "")                                  
     { 
         /* window.alert("Please enter your first name."); */
-     	document.getElementById('red_alert').style.display = 'block';
-     	document.getElementById('red_alert').innerHTML = 'Vul alsjeblieft je voornaam in.';
-     	document.getElementById('border_red').style.border = '1px solid red';
+      document.getElementById('red_alert').style.display = 'block';
+      document.getElementById('red_alert').innerHTML = 'Vul alsjeblieft je voornaam in.';
+      document.getElementById('border_red').style.border = '1px solid red';
         name.focus(); 
         return false; 
     } 
@@ -28,8 +35,8 @@ function validateForm() {
     { 
         /* window.alert("Please enter your last name."); */
         document.getElementById('red_alert').style.display = 'block';
-     	document.getElementById('red_alert').innerHTML = 'Vul alsjeblieft je achternaam in.';
-     	document.getElementById('border_red').style.border = '1px solid red';
+      document.getElementById('red_alert').innerHTML = 'Vul alsjeblieft je achternaam in.';
+      document.getElementById('border_red').style.border = '1px solid red';
         name.focus(); 
         return false; 
     }
@@ -38,8 +45,8 @@ function validateForm() {
     { 
         /* window.alert("Please enter your postal code."); */
         document.getElementById('red_alert').style.display = 'block';
-     	document.getElementById('red_alert').innerHTML = 'Vul alsjeblieft een geldige postcode in.';
-     	document.getElementById('border_red').style.border = '1px solid red';
+      document.getElementById('red_alert').innerHTML = 'Vul alsjeblieft een geldige postcode in.';
+      document.getElementById('border_red').style.border = '1px solid red';
         name.focus(); 
         return false; 
     }
@@ -48,8 +55,8 @@ function validateForm() {
     { 
         /* window.alert("Please enter your address."); */
         document.getElementById('red_alert').style.display = 'block';
-     	document.getElementById('red_alert').innerHTML = 'Vul alsjeblieft een woonplaats in.';
-     	document.getElementById('border_red').style.border = '1px solid red';
+      document.getElementById('red_alert').innerHTML = 'Vul alsjeblieft een woonplaats in.';
+      document.getElementById('border_red').style.border = '1px solid red';
         name.focus(); 
         return false; 
     } 
@@ -58,8 +65,8 @@ function validateForm() {
     { 
         /* window.alert("Please enter a valid e-mail address."); */
         document.getElementById('red_alert').style.display = 'block';
-     	document.getElementById('red_alert').innerHTML = 'Vul alsjeblieft een e-mailadres in.';
-     	document.getElementById('border_red').style.border = '1px solid red';
+      document.getElementById('red_alert').innerHTML = 'Vul alsjeblieft een e-mailadres in.';
+      document.getElementById('border_red').style.border = '1px solid red';
         email.focus(); 
         return false; 
     } 
@@ -82,8 +89,8 @@ function validateForm() {
     { 
         /* window.alert("Please enter your telephone number."); */
         document.getElementById('red_alert').style.display = 'block';
-     	document.getElementById('red_alert').innerHTML = 'Vul alsjeblieft een telefoonnummer in.';
-     	document.getElementById('border_red').style.border = '1px solid red';
+      document.getElementById('red_alert').innerHTML = 'Vul alsjeblieft een telefoonnummer in.';
+      document.getElementById('border_red').style.border = '1px solid red';
         phone.focus(); 
         return false; 
     } 
