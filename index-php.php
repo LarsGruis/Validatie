@@ -29,30 +29,30 @@
 	</nav>
 
 	<div class="container">
-		<form>
+		<form method="post" action="validate.php">
 		  <div class="form-group">
 		    <label for="formGroupExampleInput">Voornaam</label>
-		    <input type="text" required="" class="form-control" id="formGroupExampleInput" placeholder="">
+		    <input type="text" class="form-control" id="formGroupExampleInput" name="fname">
 		  </div>
 		  <div class="form-group">
 		    <label for="formGroupExampleInput">Achternaam</label>
-		    <input type="text" required="" class="form-control" id="formGroupExampleInput" placeholder="">
+		    <input type="text" class="form-control" id="formGroupExampleInput" name="lname">
 		  </div>
 		  <div class="form-group">
 		    <label for="formGroupExampleInput">Postcode</label>
-		    <input type="text" required="" class="form-control" id="formGroupExampleInput" placeholder="">
+		    <input type="text" class="form-control" id="formGroupExampleInput" name="postalcode">
 		  </div>
 		  <div class="form-group">
 		    <label for="formGroupExampleInput">Woonplaats</label>
-		    <input type="text" required="" class="form-control" id="formGroupExampleInput" placeholder="">
+		    <input type="text" class="form-control" id="formGroupExampleInput" name="livingarea">
 		  </div>
 		  <div class="form-group">
 		    <label for="formGroupExampleInput2">E-mail</label>
-		    <input type="email" class="form-control" id="formGroupExampleInput2" required="" placeholder="">
+		    <input type="email" class="form-control" id="formGroupExampleInput2" name="email">
 		  </div>
 		  <div class="form-group">
 		    <label for="formGroupExampleInput3">Telefoonnummer</label>
-		    <input type="tel" pattern="[0-9]{10}" required="" class="form-control" id="formGroupExampleInput2" placeholder="">
+		    <input type="tel" pattern="[0-9]{10}" class="form-control" id="formGroupExampleInput2" name="phonenumber">
 		  </div>
 		  <button type="submit" class="btn btn-success">Opslaan</button>
 		</form>
