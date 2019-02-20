@@ -5,25 +5,25 @@
 	<!-- <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css"> -->
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 	<link rel="stylesheet" href="style.css">
-	<link rel='icon' href='favicon.ico' type='image/x-icon'/ >
+	<link rel='icon' href='favicon2.ico' type='image/x-icon'/ >
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 </head>
 
 <body>
-	<nav class="navbar navbar-light bg-primary">
-  	  <a class="navbar-brand" href="index.php">
-    	<h1 class="text-white navbar-title">Validation HTML</h1>
+	<nav class="navbar navbar-light bg-success">
+  	  <a class="navbar-brand" href="index-php.php">
+    	<h1 class="text-white navbar-title">Validation PHP</h1>
   	  </a>
   	  <ul class="nav">
   			<li class="nav-item">
-    			<a class="nav-link active" id="blue-hover" href="index.html">HTML</a>
+    			<a class="nav-link active" id="green-hover" href="index.html">HTML</a>
   			</li>
   			<li class="nav-item">
-    			<a class="nav-link" id="blue-hover" href="index-js.html">Javascript</a>
+    			<a class="nav-link" id="green-hover" href="index-js.html">Javascript</a>
   			</li>
   			<li class="nav-item">
-    			<a class="nav-link" id="blue-hover" href="index-php.php">PHP</a>
+    			<a class="nav-link" id="green-hover" href="index-php.php">PHP</a>
   			</li>
 		</ul>
 	</nav>
@@ -54,7 +54,7 @@
 		    <label for="formGroupExampleInput3">Telefoonnummer</label>
 		    <input type="tel" pattern="[0-9]{10}" required="" class="form-control" id="formGroupExampleInput2" placeholder="">
 		  </div>
-		  <button type="submit" class="btn btn-primary">Opslaan</button>
+		  <button type="submit" class="btn btn-success">Opslaan</button>
 		</form>
 	</div>
 </body>
