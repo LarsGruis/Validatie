@@ -19,7 +19,10 @@ function validateForm() {
     var postal_code = document.forms["myForm"]["postalcode"];
     var address = document.forms["myForm"]["livingarea"];                 
     var email = document.forms["myForm"]["email"];    
-    var phone = document.forms["myForm"]["phonenumber"];    
+    var phone = document.forms["myForm"]["phonenumber"];
+    var number = document.forms["myForm"]["number"];
+    var color = document.forms["myForm"]["color"];
+    var privacy = document.forms["myForm"]["privacy"];
    
     if (first_name.value == "")                                  
     { 
@@ -94,6 +97,36 @@ function validateForm() {
         phone.focus(); 
         return false; 
     } 
+
+    if (number.value == "")                                  
+    { 
+        /* window.alert("Please enter your first name."); */
+      document.getElementById('red_alert').style.display = 'block';
+      document.getElementById('red_alert').innerHTML = 'Vul alsjeblieft je voornaam in.';
+      document.getElementById('border_red').style.border = '1px solid red';
+        name.focus(); 
+        return false; 
+    }
+
+    if (color.value == "")                                  
+    { 
+        /* window.alert("Please enter your first name."); */
+      document.getElementById('red_alert').style.display = 'block';
+      document.getElementById('red_alert').innerHTML = 'Vul alsjeblieft je voornaam in.';
+      document.getElementById('border_red').style.border = '1px solid red';
+        name.focus(); 
+        return false; 
+    }
+
+    if (privacy.value == "")                                  
+    { 
+        /* window.alert("Please enter your first name."); */
+      document.getElementById('red_alert').style.display = 'block';
+      document.getElementById('red_alert').innerHTML = 'Vul alsjeblieft je voornaam in.';
+      document.getElementById('border_red').style.border = '1px solid red';
+        name.focus(); 
+        return false; 
+    }   
    
     return true;
 }

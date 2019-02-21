@@ -48,6 +48,15 @@
 	color: #28A745 !important;
 }
 
+#submit-button button{
+	display: none;
+}
+
+.btn_danger {
+	visibility: hidden;
+}
+
+
 /* body {
 	max-width: 1200px;
 	display: block;
