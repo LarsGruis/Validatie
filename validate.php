@@ -1,11 +1,4 @@
-<html>
-<body>
-
 <?php
-
-if (isset($_POST['submit'])) {
-	validateAction();
-}
 
 function validate(){
 	$voornaam = $_POST["fname"];
@@ -17,31 +10,31 @@ function validate(){
 
 
 	if (ctype_alpha($voornaam) == false) {
-		echo "Vul een voornaam in";
+		echo "Vul een voornaam in <br>";
 	}
 
 	if (ctype_alpha($achternaam) == false) {
-		echo "Vul een achternaam in";
+		echo "Vul een achternaam in <br>";
 	}
 
 	if (ctype_alpha($postcode) == false) {
-		echo "Vul een postcode in";
+		echo "Vul een postcode in <br>";
 	}
 
 	if (ctype_alpha($woonplaats) == false) {
-		echo "Vul een woonplaats in";
+		echo "Vul een woonplaats in <br>";
 	}
 
 	if (ctype_alpha($email) == false) {
-		echo "Vul een e-mailadres in";
+		echo "Vul een e-mailadres in <br>";
 	}
 
-	if (ctype_alpha($telefoonnummer) == false) {
-		echo "Vul een telefoonnummer in";
+	if (is_numeric($telefoonnummer) == false) {
+		echo "Vul een telefoonnummer in <br>";
 	}
+
+	return "Bedankt voor het invullen van dit formulier";
 }
 ?>
 
-</body>
-</html>
 

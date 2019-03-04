@@ -1,41 +1,9 @@
+<?php include 'validate.php'; ?>
+
 <?php
 
 if (isset($_POST['submit'])) {
-	validateAction();
-}
-
-function validate(){
-	$voornaam = $_POST["fname"];
-	$achternaam = $_POST["lname"];
-	$postcode = $_POST["postalcode"];
-	$woonplaats = $_POST["livingarea"];
-	$email = $_POST["email"];
-	$telefoonnummer = $_POST["phonenumber"];
-
-
-	if (ctype_alpha($voornaam) == false) {
-		echo "Vul een voornaam in";
-	}
-
-	if (ctype_alpha($achternaam) == false) {
-		echo "Vul een achternaam in";
-	}
-
-	if (ctype_alpha($postcode) == false) {
-		echo "Vul een postcode in";
-	}
-
-	if (ctype_alpha($woonplaats) == false) {
-		echo "Vul een woonplaats in";
-	}
-
-	if (ctype_alpha($email) == false) {
-		echo "Vul een e-mailadres in";
-	}
-
-	if (ctype_alpha($telefoonnummer) == false) {
-		echo "Vul een telefoonnummer in";
-	}
+	$validate = validate();
 }
 ?>
 
@@ -52,6 +20,10 @@ function validate(){
 </head>
 
 <body>
+	<?php
+		echo $validate;
+	?>
+
 	<nav class="navbar navbar-light bg-success">
   	  <a class="navbar-brand" href="index-php.php">
     	<h1 class="text-white navbar-title">Validation PHP</h1>
@@ -93,9 +65,9 @@ function validate(){
 		  </div>
 		  <div class="form-group">
 		    <label for="formGroupExampleInput3">Telefoonnummer</label>
-		    <input type="tel" pattern="[0-9]{10}" class="form-control" id="formGroupExampleInput2" name="phonenumber">
+		    <input type="tel" class="form-control" id="formGroupExampleInput2" name="phonenumber">
 		  </div>
-		  <button type="submit" class="btn btn-success">Opslaan</button>
+		  <button type="submit" name="submit" class="btn btn-success">Opslaan</button>
 		</form>
 	</div>
 </body>
