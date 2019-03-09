@@ -25,8 +25,8 @@ function validate(){
 		echo "Vul een woonplaats in <br>";
 	}
 
-	if (ctype_alpha($email) == false) {
-		echo "Vul een e-mailadres in <br>";
+	if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
+	  $emailErr = "Invalid email format"; 
 	}
 
 	if (is_numeric($telefoonnummer) == false) {
