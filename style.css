@@ -60,6 +60,15 @@
 	display: none;
 }
 
+.error {
+	color: red;
+}
+
+#cakeform {
+    padding-left: 50px;
+    padding-right: 50px;
+}
+
 /* body {
 	max-width: 1200px;
 	display: block;

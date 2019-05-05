@@ -1,40 +1,52 @@
 <?php
+echo '<pre>'.print_r($_POST,true).'</pre>';
 
-function validate(){
-	$voornaam = $_POST["fname"];
-	$achternaam = $_POST["lname"];
-	$postcode = $_POST["postalcode"];
-	$woonplaats = $_POST["livingarea"];
-	$email = $_POST["email"];
-	$telefoonnummer = $_POST["phonenumber"];
-
-
-	if (ctype_alpha($voornaam) == false) {
-		echo "Vul een voornaam in <br>";
-	}
-
-	if (ctype_alpha($achternaam) == false) {
-		echo "Vul een achternaam in <br>";
-	}
-
-	if (ctype_alpha($postcode) == false) {
-		echo "Vul een postcode in <br>";
-	}
-
-	if (ctype_alpha($woonplaats) == false) {
-		echo "Vul een woonplaats in <br>";
-	}
-
-	if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
-	  $emailErr = "Invalid email format"; 
-	}
-
-	if (is_numeric($telefoonnummer) == false) {
-		echo "Vul een telefoonnummer in <br>";
-	}
-
-	return "Bedankt voor het invullen van dit formulier";
+$name = trim($_POST['name']);
+if(empty($name))
+{
+	echo "Please enter your name";
+	exit;
 }
-?>
 
+echo "Success";
 
+/*if(empty($_POST['selectedcake']))
+{
+    $select_cake_error = "Please select a cake size";
+    $error=true;
+}
+else
+{
+    $selected_cake = $_POST['selectedcake'];
+}
+
+echo ($selected_cake=='Round6')? 'checked':'';
+
+if(empty($_POST['flavor']))
+{
+    $flavor_error ="Please select a flavor from the list";
+    $error=true;
+}
+else
+{
+    $flavor = $_POST['flavor'];
+}
+
+if(empty($_POST['Filling']) || count($_POST['Filling']) < 2)
+{
+    $filling_error = "Please select at least 2 items for filling";
+    $error=true;
+}
+
+$filling = $_POST['Filling'];
+
+if(empty($_POST['agree']))
+{
+    $terms_error = "If you agree to the terms, please check the box below";
+    $error=true;
+}
+else
+{
+    $agree = $_POST['agree'];
+}
+?>*/
